@@ -200,7 +200,13 @@ footer {
   background: transparent;
   flex-flow: row wrap;
 }
-git stat
+.social-links {
+  display: flex;
+  justify-content: space-evenly;
+  align-content: center;
+  width: 80vw;
+  margin: 5vw;
+}
 .linknum {
   display: flex;
   flex-direction: column;
