@@ -104,3 +104,10 @@ options);
 fadeInItems.forEach((item) => {
   appearOnScroll.observe(item);
 });
+let sociallinks = document.querySelector(".social-links");
+
+function slowLoad() {
+  sociallinks.style.opacity = 1;
+}
+
+window.setTimeout(slowLoad, 1000);

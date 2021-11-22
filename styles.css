@@ -206,14 +206,27 @@ footer {
   align-content: center;
   width: 80vw;
   margin: 5vw;
+  transition: 0.7s ease-in;
+  opacity: 0;
 }
 .linknum {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  transition: all 0.3s linear;
+}
+i {
+  transition: all linear 0.3s;
+}
+.linknum:hover {
+  color: black;
+  cursor: pointer;
+}
+.linknum:hover i {
+  color: white;
+  cursor: pointer;
 }
 .link-text {
   font-size: 2.5vw;
 }
-
