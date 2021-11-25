@@ -18,27 +18,26 @@ navButton.addEventListener("click", movingNav);
 
 let htmlSymbol = document.querySelector(".html-container");
 let htmlContainer = document.querySelector(".text-container-html");
+let htmlButton = document.querySelector(".html-button");
 
 let i = 0;
 let text = `<div class='html-container'>
 <img src="pngegg.png" class='skillimgs html-image' alt="HTML Logo" />
 <article class="text-container-html"></article>`;
 
-htmlSymbol.onmouseover = function typeWriterHTML() {
+htmlButton.addEventListener("click", function typeWriterHTML() {
+  htmlButton.classList.add("invisible");
   if (i < text.length) {
     htmlContainer.innerHTML += text.charAt(i);
     i++;
     setTimeout(typeWriterHTML, 75);
   }
-};
-$(htmlSymbol).mouseleave(function () {
-  htmlContainer.innerHTML = "";
-  i = 0;
 });
 
 //CSS Hovering Functionality
 let cssArea = document.querySelector(".css-container");
 let cssTextContainer = document.querySelector(".text-container-css");
+let CssButton = document.querySelector(".css-button");
 
 let z = 0;
 let text2 = `.links-container {display: flex;
@@ -47,38 +46,38 @@ let text2 = `.links-container {display: flex;
   transform: translateX(85vw)}
 `;
 
-cssArea.addEventListener("mouseover", function typeWriterCSS() {
+CssButton.addEventListener("click", function typeWriterCSS() {
   if (z < text2.length) {
+    CssButton.classList.add("invisible");
     cssTextContainer.innerHTML += text2.charAt(z);
     z++;
     setTimeout(typeWriterCSS, 75);
   }
 });
-$(cssArea).mouseleave(function () {
-  cssTextContainer.innerHTML = "";
-  z = 0;
-});
 
 //JS Hovering Functionality
 
-let jsArea = document.querySelector(".js-container");
+let JSShowButton = document.querySelector(".JS-button");
 let jsTextContainer = document.querySelector(".text-container-js");
 
 let y = 0;
-let text3 = `jsArea.addEventListener("mouseover", function typeWriterJS() {if (y < text3.length) {jsTextContainer.innerHTML += text3.charAt(y);
-    y++;
-    setTimeout(typeWriterJS, 75)}})`;
-
-jsArea.addEventListener("mouseover", function typeWriterJS() {
+let text3 = `JSShowButton.addEventListener("click", function typeWriterJS() {
+  JSShowButton.classList.add("invisible");
   if (y < text3.length) {
     jsTextContainer.innerHTML += text3.charAt(y);
     y++;
-    setTimeout(typeWriterJS, 75);
+    var TimingLoop = setTimeout(typeWriterJS, 75);
   }
-});
-$(jsArea).mouseleave(function () {
-  jsTextContainer.innerHTML = "";
-  y = 0;
+})
+`;
+
+JSShowButton.addEventListener("click", function typeWriterJS() {
+  JSShowButton.classList.add("invisible");
+  if (y < text3.length) {
+    jsTextContainer.innerHTML += text3.charAt(y);
+    y++;
+    var TimingLoop = setTimeout(typeWriterJS, 75);
+  }
 });
 
 //Content Fade-In
@@ -111,3 +110,27 @@ function slowLoad() {
 }
 
 window.setTimeout(slowLoad, 1000);
+
+//Fixed Navbar After Scrolling
+let AboutSection = document.querySelector("#about");
+let topSection = document.querySelector("#top");
+const NavOptions = { threshold: 0.7, root: null };
+let homeLink = document.querySelector("#home-link");
+
+let FixedNav = new IntersectionObserver(function (entries, FixedNav) {
+  entries.forEach(function (entry) {
+    if (!entry.isIntersecting) {
+      navContainer.style.position = "fixed";
+      navContainer.style.background = "black";
+      navContainer.classList.add("margin");
+      homeLink.style.display = "inline";
+    } else {
+      navContainer.style.position = "absolute";
+      navContainer.style.background = "";
+      homeLink.style.display = "none";
+    }
+  });
+}, NavOptions);
+console.log(FixedNav);
+
+FixedNav.observe(topSection);

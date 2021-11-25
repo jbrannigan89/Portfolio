@@ -13,6 +13,9 @@
   padding: 0;
   max-width: 100%;
 }
+html {
+  scroll-behavior: smooth;
+}
 
 .image {
   opacity: 0.9;
@@ -44,11 +47,11 @@
   align-items: center;
   overflow: hidden;
   z-index: 1;
+  height: 15vh;
 }
 
 .links-container {
   display: flex;
-
   transition: all linear 0.5s;
   transform: translateX(85vw);
 }
@@ -70,17 +73,19 @@
   position: absolute;
   align-self: center;
   text-align: center;
-  font-family: "Noto Sans JP", sans-serif;
 }
 
 .name {
   font-size: 4em;
   position: relative;
+  font-family: "Roboto", sans-serif;
 }
 
 .profession {
   font-size: 2em;
   position: relative;
+  font-family: "Lato", sans-serif;
+  color: rgb(223, 212, 154);
 }
 .show {
   transform: translateX(0vw);
@@ -92,16 +97,19 @@ section {
   padding: 0 0 1em 0;
 }
 
-.about {
+#about {
   background: chartreuse;
+  scroll-margin-top: 15vh;
 }
 
-.skills {
+#skills {
   background: rgb(245, 242, 241);
+  scroll-margin-top: 15vh;
 }
 
-.projects {
+#projects {
   background: cornflowerblue;
+  scroll-margin-top: 15vh;
 }
 
 .titles {
@@ -164,7 +172,8 @@ footer {
   align-items: center;
 }
 .logos {
-  transition: background 1s;
+  transition: background 0.3s;
+  display: flex;
 }
 
 .logos:hover {
@@ -176,7 +185,7 @@ footer {
 }
 .fade-in {
   opacity: 0;
-  transition: all 0.3s ease-in;
+  transition: all 0.5s ease-in;
   transform: translateX(-3vw);
 }
 .view {
@@ -229,4 +238,22 @@ i {
 }
 .link-text {
   font-size: 2.5vw;
+}
+.invisible {
+  display: none;
+}
+.show-buttons {
+  font-size: 2em;
+  border-radius: 0.5em;
+  padding: 1rem;
+  border: 2px solid white;
+  transition: all 0.3s ease-in;
+  background: rgb(165, 165, 190);
+}
+.show-buttons:hover {
+  cursor: pointer;
+  background: rgb(126, 214, 114);
+}
+#home-link {
+  display: none;
 }
