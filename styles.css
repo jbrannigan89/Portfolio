@@ -208,6 +208,7 @@ footer {
   align-items: center;
   background: transparent;
   flex-flow: row wrap;
+  color: black;
 }
 .social-links {
   display: flex;
