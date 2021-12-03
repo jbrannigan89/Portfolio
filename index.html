@@ -12,7 +12,7 @@
         <link rel='stylesheet' href='styles.css'>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Lato&family=Noto+Sans+JP&family=Roboto&display=swap"
+        <link href="https://fonts.googleapis.com/css2?family=Lato&family=Noto+Sans+JP&family=Roboto&family=M+PLUS+1+Code&display=swap" rel="stylesheet"
             rel="stylesheet">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     </head>
@@ -59,12 +59,7 @@
                                 class="fa fa-facebook-square" ton aria-hidden="true"></i></a>
                         <p class=link-text>Facebook</p>
                     </div>
-                    <div class='linknum'>
-                        <a href="mailto: jbrannigan89@gmail.com" class="link-button"><i class="fa fa-envelope mail"
-                                aria-hidden="true"></i>
-                        </a>
-                        <p class=link-text>Email</p>
-                    </div>
+
                     <div class='linknum'>
                         <button type='button' class='link-button'><i class="fa fa-address-card-o"
                                 aria-hidden="true"></i>
@@ -101,30 +96,42 @@
                 <h1>My Skills</h1>
             </header>
             <div class='icon-container'>
-                <div class='html-container logos fade-in'><img src="pngegg.png" class='skillimgs html-image' alt="" />
+                <div class='interactive-container logos fade-in'><img src="pngegg.png" class='skillimgs html-image'
+                        alt="" />
                     <article class="text-container-html"></article><button type='button'
                         class='html-button show-buttons'>See this
                         elements HTML</button>
 
                 </div>
-                <div class='css-container logos fade-in'><img src="pngegg-1.png" class='skillimgs' alt="">
+                <div class='interactive-container logos fade-in'><img src="pngegg-1.png" class='skillimgs' alt="">
                     <article class="text-container-css"></article><button type='button'
                         class='css-button show-buttons'>See this
                         elements CSS</button>
                 </div>
-                <div class='js-container logos fade-in'><img src="pngegg-2.png" class='skillimgs' alt="">
+                <div class='interactive-container logos fade-in'><img src="pngegg-2.png" class='skillimgs' alt="">
                     <article class="text-container-js"></article><button type='button'
                         class='JS-button show-buttons'>See this
                         elements Javascript</button>
                 </div>
-                <div class="additional-tech-container logos fade-in">
+                <div class="logos additional-tech-container fade-in">
 
-                    <article class='additional-technologies '><img src="jquery.png" alt=""
-                            class="jquery-image skillimgs ">
+                    <article class='additional-technologies '>
+                        <h4>jquery</h4><img src="jquery.png" alt="" class="jquery-image skillimgs ">
                     </article>
-                    <article class='additional-technologies '><img src="sass.png" alt="" class="sass-image skillimgs">
+                    <article class='additional-technologies '>
+                        <h4>Sass</h4><img src="sass.png" alt="" class="sass-image skillimgs">
                     </article>
-                    <article class='additional-technologies '><img src="linux.png" alt="" class="linux-image skillimgs">
+                    <article class='additional-technologies '>
+                        <h4>Linux</h4><img src="linux.png" alt="" class="linux-image skillimgs">
+                    </article>
+                    <article class='additional-technologies '>
+                        <h4>React</h4><img src="react.png" alt="" class="react-image skillimgs">
+                    </article>
+                    <article class='additional-technologies '>
+                        <h4>JSON</h4><img src="json.png" alt="" class="JSON-image skillimgs">
+                    </article>
+                    <article class='additional-technologies '>
+                        <h4>Bootstrap</h4><img src="bootstrap.png" alt="" class="JSON-image skillimgs">
                     </article>
                 </div>
 
@@ -137,13 +144,18 @@
             </header>
         </section>
         <footer id="Contact">
-            <form action="https://formsubmit.co/387bc4e82d3ef431976b8483567b5538" method="POST">
-                <input type="text" name="fname" placeholder="First Name" required>
-                <input type="text" name="lname" placeholder="Last Name" required>
+            <form id='Contact-Form' action="https://formsubmit.co/387bc4e82d3ef431976b8483567b5538" method="POST">
+                <h3>Get in touch with me</h3>
+                <p>Full Name</p>
+                <input type="text" name="name" placeholder="Name" required>
+                <p>Email Address</p>
                 <input type="email" name="
-            email" placeholder="Email" required><input type="text" name="message" placeholder="Message" required>
-                <button type="submit">Send</button>
+            email" placeholder="Email" required>
+                <p>Message</p>
+                <textarea type="text" name="message" placeholder="Message" required></textarea>
+                <button type="submit" id="Submit-Button">Send</button>
             </form>
+            <img src='contactart.jpeg' id='Contactme-Art' />
         </footer>
 
 

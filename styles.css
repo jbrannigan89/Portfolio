@@ -6,6 +6,7 @@
     font-family: 'Open Sans', sans-serif;
 
     font-family: 'Roboto', sans-serif;
+    font-family: 'M PLUS 1 Code', sans-serif;
  */
 
 * {
@@ -117,11 +118,6 @@ section {
   font-size: 2em;
 }
 
-footer {
-  background: cyan;
-  height: 30vh;
-}
-
 .nav-button {
   font-size: 2.8em;
   margin: 0.5em 1em 0.5em 0.5em;
@@ -161,7 +157,7 @@ footer {
 }
 
 .skillimgs {
-  width: 30vw;
+  height: 30vh;
 }
 .icon-container {
   display: flex;
@@ -181,7 +177,10 @@ footer {
 }
 .additional-tech-container {
   display: flex;
-  justify-content: space-between;
+  flex-flow: row wrap;
+  align-items: center;
+  column-gap: 6vw;
+  row-gap: 3vh;
 }
 .fade-in {
   opacity: 0;
@@ -257,4 +256,68 @@ i {
 }
 #home-link {
   display: none;
+}
+#Contact-Form {
+  display: flex;
+  flex-direction: column;
+  background: rgb(248, 246, 246);
+  width: 50%;
+  padding: 0.5em;
+  border-radius: 0.3em;
+}
+#Contact-Form h3 {
+  margin-bottom: 0.5em;
+  font-size: 1.2em;
+  font-family: "Noto Sans JP", sans-serif;
+}
+#Contact-Form input {
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  padding: 0.3em;
+  margin: 0.15em 0 0.3em 0;
+  border-radius: 0.2em;
+}
+textarea[type="text"] {
+  height: 7em;
+  font-size: 1rem;
+  padding: 0.3em;
+  margin: 0.15em 0 0.3em 0;
+  font-family: "Roboto", sans-serif;
+  border-radius: 0.2em;
+}
+#Submit-Button {
+  font-size: 1.25em;
+  padding: 0.3em;
+  cursor: pointer;
+  width: 35%;
+  background: rgb(88, 187, 182);
+  border-style: none;
+  transition: all 0.3s linear;
+  border-radius: 0.5em;
+  align-self: center;
+  margin-top: 0.5em;
+}
+#Submit-Button:hover {
+  background: rgb(77, 126, 231);
+}
+#Contact {
+  background: white;
+  padding: 2em;
+  display: flex;
+  gap: 1em;
+}
+#Contact p {
+  font-family: "Noto Sans JP", sans-serif;
+}
+.additional-technologies {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+.interactive-container {
+  padding: 0.2em 2em;
+}
+.additional-technologies h4 {
+  font-family: "M PLUS 1 Code", sans-serif;
+  font-size: 1.5em;
 }
