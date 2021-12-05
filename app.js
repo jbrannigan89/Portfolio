@@ -6,7 +6,6 @@ function navBar() {
   links.classList.toggle("show");
 }
 function movingNav() {
-  navButton.classList.toggle("moveNav");
   navButton.classList.toggle("rotate");
 }
 
@@ -128,9 +127,32 @@ let FixedNav = new IntersectionObserver(function (entries, FixedNav) {
       navContainer.style.position = "absolute";
       navContainer.style.background = "";
       homeLink.style.display = "none";
+      links.classList.remove("show");
     }
   });
 }, NavOptions);
 console.log(FixedNav);
 
 FixedNav.observe(topSection);
+
+//Clicking Nav Option closes Vertical NavBar
+
+let theNavLinks = document.querySelectorAll(".nav-links");
+
+theNavLinks.forEach(function (link) {
+  link.addEventListener("click", function () {
+    links.classList.remove("show");
+    movingNav();
+  });
+});
+
+//If Nav Links are Open and you scroll to the top manually the Nav BAr Still Rotates
+
+function rotateNavButton() {
+  navButton.classList.remove("rotate");
+}
+window.addEventListener("scroll", function () {
+  if (window.pageYOffset == 0) {
+    rotateNavButton();
+  }
+});

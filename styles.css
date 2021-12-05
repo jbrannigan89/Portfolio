@@ -1,10 +1,7 @@
 /* Font Families
     font-family: 'Lato', sans-serif;
-
     font-family: 'Noto Sans JP', sans-serif;
-
     font-family: 'Open Sans', sans-serif;
-
     font-family: 'Roboto', sans-serif;
     font-family: 'M PLUS 1 Code', sans-serif;
  */
@@ -31,30 +28,36 @@ html {
 
 .nav-links {
   text-decoration: none;
-  font-size: 1.7em;
+  font-size: 2.7em;
   color: white;
-  padding: 0.3em 0.4em;
-  border-right: solid rgb(247, 242, 242) 2px;
+  width: 200px;
+  display: block;
+  text-align: center;
+  transition: all 0.3s ease-in;
 }
 .nav-links:hover {
   color: rgb(5, 5, 4);
+  background: rgb(113, 184, 48);
 }
 .nav-container {
-  position: absolute;
   width: 100%;
   display: flex;
-  border-radius: 0.5em;
+  flex-flow: column;
   justify-content: flex-start;
-  align-items: center;
-  overflow: hidden;
+  align-items: flex-start;
   z-index: 1;
   height: 15vh;
 }
 
 .links-container {
   display: flex;
-  transition: all linear 0.5s;
-  transform: translateX(85vw);
+  flex-flow: column;
+  transition: all linear 0.3s;
+  transform: translateX(-40vw);
+
+  background: rgb(193, 196, 202);
+
+  row-gap: 1em;
 }
 
 .links-container li {
@@ -124,8 +127,7 @@ section {
   border-style: none;
   background: transparent;
   color: white;
-  transition: all linear 0.5s;
-  transform: translateX(85vw);
+  transition: all linear 0.3s;
 }
 .moveNav {
   transform: translateX(0vw);
@@ -320,4 +322,6 @@ textarea[type="text"] {
 .additional-technologies h4 {
   font-family: "M PLUS 1 Code", sans-serif;
   font-size: 1.5em;
+}
+.links-container li {
 }
