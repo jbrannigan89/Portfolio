@@ -106,8 +106,10 @@ section {
 }
 
 #about {
-  background: chartreuse;
+  background: rgb(240, 238, 236);
   scroll-margin-top: 15vh;
+  padding-top: 2em;
+  
 }
 
 #skills {
@@ -116,7 +118,7 @@ section {
 }
 
 #projects {
-  background: cornflowerblue;
+  background: rgb(240, 238, 236);
   scroll-margin-top: 15vh;
 }
 
@@ -153,12 +155,11 @@ section {
   float: right;
   width: 40vw;
   border: black 2px solid;
+  margin: 0 1.5em;
 }
 .abt-description {
-  font-size: 1.1em;
+  font-size: 1.5em;
   font-family: "Roboto", sans-serif;
-}
-.sub-container * {
   margin: 0 1.5em;
 }
 
@@ -183,7 +184,7 @@ section {
 }
 .additional-tech-container {
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: row wrap;justify-content: center;
   align-items: center;
   column-gap: 6vw;
   row-gap: 3vh;
@@ -329,5 +330,20 @@ textarea[type="text"] {
   font-family: "M PLUS 1 Code", sans-serif;
   font-size: 1.5em;
 }
-.links-container li {
+.mojopic {
+  margin-top: 5vh;
+}
+figcaption {
+  text-align: center;
+}
+figure {
+  margin-bottom: 5vh;
+}
+.sectionBreaks {
+  width: 40vw;
+  border: solid rgb(143, 132, 132) 1px;
+}
+.sectionDivs {
+  display: flex;
+  justify-content: center;padding-bottom: 2em;
 }
