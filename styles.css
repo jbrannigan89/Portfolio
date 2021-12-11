@@ -19,6 +19,7 @@ html {
 .image {
   opacity: 0.9;
   object-fit: cover;
+  width: 100%;
 }
 
 #top {
@@ -102,19 +103,19 @@ html {
 section {
   min-height: 100vh;
   height: auto;
-  padding: 0 0 1em 0;
 }
 
 #about {
   background: rgb(240, 238, 236);
   scroll-margin-top: 15vh;
   padding-top: 2em;
-  
+  padding-bottom: 1em;
 }
 
 #skills {
   background: rgb(245, 242, 241);
   scroll-margin-top: 15vh;
+  padding-bottom: 1em;
 }
 
 #projects {
@@ -164,7 +165,7 @@ section {
 }
 
 .skillimgs {
-  height: 30vh;
+  width: 25vw;
 }
 .icon-container {
   display: flex;
@@ -184,7 +185,8 @@ section {
 }
 .additional-tech-container {
   display: flex;
-  flex-flow: row wrap;justify-content: center;
+  flex-flow: row wrap;
+  justify-content: center;
   align-items: center;
   column-gap: 6vw;
   row-gap: 3vh;
@@ -252,7 +254,7 @@ i {
   display: none;
 }
 .show-buttons {
-  font-size: 2em;
+  font-size: 4vw;
   border-radius: 0.5em;
   padding: 1rem;
   border: 2px solid white;
@@ -270,7 +272,7 @@ i {
   display: flex;
   flex-direction: column;
   background: rgb(248, 246, 246);
-  width: 50%;
+  width: 40%;
   padding: 0.5em;
   border-radius: 0.3em;
 }
@@ -295,10 +297,9 @@ textarea[type="text"] {
   border-radius: 0.2em;
 }
 #Submit-Button {
-  font-size: 1.25em;
-  padding: 0.3em;
+  font-size: 1.5em;
+  padding: 0.5em;
   cursor: pointer;
-  width: 35%;
   background: rgb(88, 187, 182);
   border-style: none;
   transition: all 0.3s linear;
@@ -313,6 +314,7 @@ textarea[type="text"] {
   background: white;
   padding: 2em;
   display: flex;
+  justify-content: center;
   gap: 1em;
 }
 #Contact p {
@@ -345,5 +347,13 @@ figure {
 }
 .sectionDivs {
   display: flex;
-  justify-content: center;padding-bottom: 2em;
+  justify-content: center;
+  padding-bottom: 2em;
+}
+.margin-bottom {
+  margin-bottom: 5vh;
+}
+#Contactme-Art {
+  object-fit: contain;
+  max-width: 60%;
 }
