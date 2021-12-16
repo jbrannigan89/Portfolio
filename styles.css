@@ -30,7 +30,7 @@ html {
 
 .nav-links {
   text-decoration: none;
-  font-size: 10vw;
+  font-size: min(10vw, 2em);
   color: rgb(194, 138, 55);
   width: 100%;
   display: block;
@@ -47,9 +47,14 @@ html {
   flex-flow: column;
   justify-content: flex-start;
   align-items: flex-start;
+
   z-index: 1;
-  height: 15vh;
-  row-gap: 0;
+}
+.nav-button-container {
+  
+  width: 100%;
+  display: flex;
+  padding: 0.2em 0.4em;
 }
 
 .links-container {
@@ -129,8 +134,7 @@ section {
 }
 
 .nav-button {
-  font-size: 2.8em;
-  margin: 0.5em 1em 0.5em 0.5em;
+  font-size: 2em;
   border-style: none;
   background: transparent;
   color: white;
@@ -157,6 +161,7 @@ section {
   width: 40vw;
   border: black 2px solid;
   margin: 0 1.5em;
+  max-width: 400px;
 }
 .abt-description {
   font-size: 1.5em;
@@ -166,15 +171,13 @@ section {
 
 .skillimgs {
   width: 25vw;
+  max-width: 200px;
 }
 .icon-container {
   display: flex;
   flex-flow: column;
 }
-.icon-container div {
-  display: flex;
-  align-items: center;
-}
+
 .logos {
   transition: background 0.3s;
   display: flex;
@@ -184,12 +187,34 @@ section {
   background: rgb(216, 207, 209, 0.5);
 }
 .additional-tech-container {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
-  align-items: center;
-  column-gap: 6vw;
-  row-gap: 3vh;
+  display: grid;
+  justify-content: space-around;
+
+  grid-template-columns: repeat(3, min(25%, 150px));
+  grid-template-rows: auto auto;
+  grid-template-areas: "one two three" "four five six";
+}
+.additional-tech-container:hover {
+  background: rgb(216, 207, 209, 0.5);
+  transition: background 0.3s;
+}
+.one {
+  grid-area: one;
+}
+.two {
+  grid-area: two;
+}
+.three {
+  grid-area: three;
+}
+.four {
+  grid-area: four;
+}
+.five {
+  grid-area: five;
+}
+.six {
+  grid-area: six;
 }
 .fade-in {
   opacity: 0;
@@ -211,7 +236,7 @@ section {
 
 .link-button {
   border-style: none;
-  font-size: 15vw;
+  font-size: min(15vw, 80px);
   display: flex;
   align-items: center;
   background: transparent;
@@ -254,7 +279,7 @@ i {
   display: none;
 }
 .show-buttons {
-  font-size: 4vw;
+  font-size: min(4vw, 2em);
   border-radius: 0.5em;
   padding: 1rem;
   border: 2px solid white;
@@ -324,9 +349,12 @@ textarea[type="text"] {
   display: flex;
   flex-flow: column;
   align-items: center;
+  padding: 3em 0;
 }
 .interactive-container {
   padding: 0.2em 2em;
+  display: flex;
+  align-items: center;
 }
 .additional-technologies h4 {
   font-family: "M PLUS 1 Code", sans-serif;
