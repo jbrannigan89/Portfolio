@@ -80,7 +80,7 @@ JSShowButton.addEventListener("click", function typeWriterJS() {
 });
 
 //Content Fade-In
-const options = { root: null, threshold: 0.4 };
+const options = { root: null, threshold: 0.4};
 let fadeInItems = document.querySelectorAll(".fade-in");
 
 let appearOnScroll = new IntersectionObserver(function (
@@ -113,7 +113,7 @@ window.setTimeout(slowLoad, 1000);
 //Fixed Navbar After Scrolling
 let AboutSection = document.querySelector("#about");
 let topSection = document.querySelector("#top");
-const NavOptions = { threshold: 0.7, root: null };
+const NavOptions = { threshold: 0.8, root: null };
 let homeLink = document.querySelector("#home-link");
 let navbarBackground = document.querySelector(".nav-button-container");
 

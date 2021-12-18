@@ -1,0 +1,386 @@
+/* Font Families
+    font-family: 'Lato', sans-serif;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    font-family: 'M PLUS 1 Code', sans-serif;
+    font-family: 'Caveat', cursive;
+ */
+
+* {
+  margin: 0;
+  padding: 0;
+  max-width: 100%;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+.image {
+  opacity: 0.9;
+  object-fit: cover;
+  width: 100%;
+}
+
+#top {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+
+.nav-links {
+  text-decoration: none;
+  font-size: min(10vw, 2em);
+  color: rgb(194, 138, 55);
+  width: 100%;
+  display: block;
+  text-align: center;
+  transition: all 0.3s ease-in;
+}
+.nav-links:hover {
+  color: rgb(255, 255, 255);
+  background: rgb(50, 119, 124);
+}
+.nav-container {
+  width: 100%;
+  display: flex;
+  flex-flow: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+
+  z-index: 1;
+}
+.nav-button-container {
+  width: 100%;
+  display: flex;
+  padding: 0.2em 0.4em;
+}
+
+.links-container {
+  display: flex;
+  flex-flow: column;
+  transition: all linear 0.3s;
+  transform: translateX(-50vw);
+  background: white;
+  row-gap: 1em;
+  width: 50vw;
+}
+
+.links-container li {
+  font-family: "Open Sans", sans-serif;
+
+  list-style: none;
+}
+
+.banner {
+  max-width: 100vw;
+  display: flex;
+  justify-content: center;
+}
+
+.description {
+  color: rgb(248, 247, 245);
+  position: absolute;
+  align-self: center;
+  text-align: center;
+  display: flex;
+  flex-flow: column;
+  row-gap: 0.5em;
+}
+
+.name {
+  font-size: 13vw;
+  position: relative;
+  font-family: "Roboto", sans-serif;
+}
+
+.profession {
+  font-size: 7vw;
+
+  font-family: "Caveat", cursive;
+  color: rgb(223, 212, 154);
+}
+.show {
+  transform: translateX(0vw);display:inline;
+}
+
+section {
+  min-height: 100vh;
+  height: auto;
+}
+
+#about {
+  background: rgb(240, 238, 236);
+  scroll-margin-top: 15vh;
+  padding-top: 2em;
+  padding-bottom: 1em;
+}
+
+#skills {
+  background: rgb(245, 242, 241);
+  scroll-margin-top: 15vh;
+  padding-bottom: 1em;
+}
+
+#projects {
+  background: rgb(240, 238, 236);
+  scroll-margin-top: 15vh;
+}
+
+.titles {
+  font-family: "Lato", sans-serif;
+  font-size: 2em;
+}
+
+.nav-button {
+  font-size: 2em;
+  border-style: none;
+  background: transparent;
+  color: white;
+  transition: all linear 0.3s;
+}
+.moveNav {
+  transform: translateX(0vw);
+}
+
+.nav-button:hover {
+  cursor: pointer;
+}
+.nav-button:active {
+  cursor: pointer;
+}
+
+.titles {
+  display: flex;
+  justify-content: center;
+}
+.pic {
+  border-radius: 100%;
+  float: right;
+  width: 40vw;
+  border: black 2px solid;
+  margin: 0 1.5em;
+  max-width: 400px;
+}
+.abt-description {
+  font-size: 1.5em;
+  font-family: "Roboto", sans-serif;
+  margin: 0 1.5em;
+}
+
+.skillimgs {
+  width: 25vw;
+  max-width: 200px;
+}
+.icon-container {
+  display: flex;
+  flex-flow: column;
+}
+
+.logos {
+  transition: background 0.3s;
+  display: flex;
+}
+
+.logos:hover {
+  background: rgb(216, 207, 209, 0.5);
+}
+.additional-tech-container {
+  display: grid;
+  justify-content: space-around;
+
+  grid-template-columns: repeat(3, min(25%, 150px));
+  grid-template-rows: auto auto;
+  grid-template-areas: "one two three" "four five six";
+}
+.additional-tech-container:hover {
+  background: rgb(216, 207, 209, 0.5);
+  transition: background 0.3s;
+}
+.one {
+  grid-area: one;
+}
+.two {
+  grid-area: two;
+}
+.three {
+  grid-area: three;
+}
+.four {
+  grid-area: four;
+}
+.five {
+  grid-area: five;
+}
+.six {
+  grid-area: six;
+}
+.fade-in {
+  opacity: 0;
+  transition: all 0.5s ease-in;
+  transform: translateX(-3vw);
+}
+.view {
+  opacity: 1;
+  transform: translateX(0);
+}
+.rotate {
+  transform: rotate(90deg);
+}
+.pic-background {
+  width: 40vw;
+  position: absolute;
+  left: 0px;
+}
+
+.link-button {
+  border-style: none;
+  font-size: min(15vw, 80px);
+  display: flex;
+  align-items: center;
+  background: transparent;
+  flex-flow: row wrap;
+  color: black;
+  text-decoration: none;
+}
+.social-links {
+  display: flex;
+  justify-content: space-evenly;
+  align-content: center;
+  flex-flow: row wrap;
+
+  transition: 0.5s ease-in;
+  opacity: 0;
+}
+.linknum {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s linear;
+}
+i {
+  transition: all linear 0.3s;
+}
+.linknum:hover {
+  color: black;
+  cursor: pointer;
+}
+.linknum:hover i {
+  color: white;
+  cursor: pointer;
+}
+.link-text {
+  font-size: 4vw;
+  font-family: "Noto Sans JP", sans-serif;
+}
+.invisible {
+  display: none;
+}
+.show-buttons {
+  font-size: min(4vw, 2em);
+  border-radius: 0.5em;
+  padding: 1rem;
+  border: 2px solid white;
+  transition: all 0.3s ease-in;
+  background: rgb(165, 165, 190);
+}
+.show-buttons:hover {
+  cursor: pointer;
+  background: rgb(126, 214, 114);
+}
+#home-link {
+  display: none;
+}
+#Contact-Form {
+  display: flex;
+  flex-direction: column;
+  background: rgb(248, 246, 246);
+  width: 40%;
+  padding: 0.5em;
+  border-radius: 0.3em;
+}
+#Contact-Form h3 {
+  margin-bottom: 0.5em;
+  font-size: 1.2em;
+  font-family: "Noto Sans JP", sans-serif;
+}
+#Contact-Form input {
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  padding: 0.3em;
+  margin: 0.15em 0 0.3em 0;
+  border-radius: 0.2em;
+}
+textarea[type="text"] {
+  height: 7em;
+  font-size: 1rem;
+  padding: 0.3em;
+  margin: 0.15em 0 0.3em 0;
+  font-family: "Roboto", sans-serif;
+  border-radius: 0.2em;
+}
+#Submit-Button {
+  font-size: 1.5em;
+  padding: 0.5em;
+  cursor: pointer;
+  background: rgb(88, 187, 182);
+  border-style: none;
+  transition: all 0.3s linear;
+  border-radius: 0.5em;
+  align-self: center;
+  margin-top: 0.5em;
+}
+#Submit-Button:hover {
+  background: rgb(77, 126, 231);
+}
+#Contact {
+  background: white;
+  padding: 2em;
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+}
+#Contact p {
+  font-family: "Noto Sans JP", sans-serif;
+}
+.additional-technologies {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  padding: 3em 0;
+}
+.interactive-container {
+  padding: 0.2em 2em;
+  display: flex;
+  align-items: center;
+}
+.additional-technologies h4 {
+  font-family: "M PLUS 1 Code", sans-serif;
+  font-size: 1.5em;
+}
+.mojopic {
+  margin-top: 5vh;
+}
+figcaption {
+  text-align: center;
+}
+figure {
+  margin-bottom: 5vh;
+}
+.sectionBreaks {
+  width: 40vw;
+  border: solid rgb(143, 132, 132) 1px;
+}
+.sectionDivs {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 2em;
+}
+.margin-bottom {
+  margin-bottom: 5vh;
+}
+#Contactme-Art {
+  object-fit: contain;
+  max-width: 60%;
+}
