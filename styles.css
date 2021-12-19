@@ -61,8 +61,9 @@ html {
   transform: translateX(-50vw);
   background: white;
   row-gap: 1em;
-  width: 50vw;
-  position: absolute;top:50px
+  width: min(50vw, 200px);
+  position: absolute;
+  top: 50px;
 }
 
 .links-container li {
@@ -106,7 +107,6 @@ html {
 }
 
 section {
-  min-height: 100vh;
   height: auto;
 }
 
@@ -126,6 +126,7 @@ section {
 #projects {
   background: rgb(240, 238, 236);
   scroll-margin-top: 15vh;
+  height: 50vh;
 }
 
 .titles {
@@ -296,7 +297,7 @@ i {
 #Contact-Form {
   display: flex;
   flex-direction: column;
-  background: rgb(248, 246, 246);
+  background: white;
   width: 40%;
   padding: 0.5em;
   border-radius: 0.3em;
@@ -322,18 +323,20 @@ textarea[type="text"] {
   border-radius: 0.2em;
 }
 #Submit-Button {
-  font-size: 1.5em;
+  font-size: min(3vw, 1.5em);
   padding: 0.5em;
   cursor: pointer;
-  background: rgb(88, 187, 182);
+  background: rgb(99, 189, 77);
   border-style: none;
   transition: all 0.3s linear;
   border-radius: 0.5em;
   align-self: center;
   margin-top: 0.5em;
+  width: 100%;
 }
 #Submit-Button:hover {
-  background: rgb(77, 126, 231);
+  background: rgb(57, 121, 41);
+  color: white;
 }
 #Contact {
   background: white;
@@ -388,4 +391,30 @@ figure {
 }
 .text-container {
   font-size: min(3vw, 15px);
+}
+#footer {
+  background: rgb(3, 24, 18);
+  padding: 1em;
+  color: white;
+}
+.outro {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: min(3vw, 0.9em);
+}
+.footer-links-container {
+  display: flex;
+  justify-content: center;
+  column-gap: min(2vw, 2em);
+}
+.link-button-bottom {
+  border-style: none;
+  font-size: min(6vw, 2em);
+  display: flex;
+  align-items: center;
+  background: transparent;
+  flex-flow: row wrap;
+  color: rgb(83, 204, 178);
+  text-decoration: none;
 }
