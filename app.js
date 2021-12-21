@@ -80,7 +80,7 @@ JSShowButton.addEventListener("click", function typeWriterJS() {
 });
 
 //Content Fade-In
-const options = { root: null, threshold: 0.4};
+const options = { root: null, threshold: 0.4 };
 let fadeInItems = document.querySelectorAll(".fade-in");
 
 let appearOnScroll = new IntersectionObserver(function (
@@ -154,5 +154,153 @@ function rotateNavButton() {
 window.addEventListener("scroll", function () {
   if (window.pageYOffset == 0) {
     rotateNavButton();
+  }
+});
+
+window.addEventListener("load", function desktopVersion() {
+  let subContainerSection = document.querySelector(".sub-container");
+  let description = document.querySelector(".description");
+  console.log(subContainerSection.clientWidth);
+  if (subContainerSection.clientWidth > 600) {
+    description.innerHTML = `<img class='pic' src='portfoliopic-1.jpg' /> <h1 class="name"> Joe Brannigan</h1>
+                <h3 class="profession">Web Developer</h3>
+                <div class='social-links'>
+                    <div class='linknum'><a href='https://twitter.com/JosephBrannig15' target="_blank"
+                            class='link-button'><i class="fa fa-twitter-square" aria-hidden="true"></i>
+                        </a>
+                        <p class=link-text>Twitter</p>
+                    </div>
+                    <div class='linknum'>
+                        <a href="https://github.com/jbrannigan89" target="_blank" class='link-button'><i
+                                class="fa fa-github-alt" aria-hidden="true"></i>
+                        </a>
+                        <p class=link-text>Github</p>
+                    </div>
+
+                    <div class='linknum'>
+                        <a href='https://www.facebook.com' target='_blank' class='link-button'><i
+                                class="fa fa-facebook-official" aria-hidden="true"></i>
+                        </a>
+                        <p class=link-text>Facebook</p>
+                    </div>
+
+                    <div class='linknum'>
+                        <button type='button' class='link-button'><i class="fa fa-address-card-o"
+                                aria-hidden="true"></i>
+                        </button>
+                        <p class=link-text>Resume</p>
+                    </div>
+                </div>`;
+    subContainerSection.innerHTML = `
+                <p class='abt-description'>Hello! My name's Joe and I'm a web developer. <br><br>
+                    I started tinkering with web design a few years ago. I was taking an IT networking
+                    course on coursera and was exposed to programming. I quickly found out that I enjoy programming more
+                    than the networking side of technology. I then dove in to learning from freeCodeCamp courses,
+                    youtube
+                    tutorials, and
+                    the expansive breadth of knowledge available on the internet.
+                    <br><br>
+                    I'm currently based in Greenville, South Carolina. In my freetime I like to travel, spend time with
+                    family, hike, and code.
+                </p>
+                <figure><img src='mojo.jpg' class='mojopic' />
+                    <figcaption>Lazy dog Mojo</figcaption>
+                </figure>`;
+  } 
+});
+window.addEventListener("resize", function desktopVersion() {
+  let subContainerSection = document.querySelector(".sub-container");
+  let description = document.querySelector(".description");
+  console.log(subContainerSection.clientWidth);
+  if (subContainerSection.clientWidth > 600) {
+    description.innerHTML = `<img class='pic' src='portfoliopic-1.jpg' /> <h1 class="name"> Joe Brannigan</h1>
+                <h3 class="profession">Web Developer</h3>
+                <div class='social-links'>
+                    <div class='linknum'><a href='https://twitter.com/JosephBrannig15' target="_blank"
+                            class='link-button'><i class="fa fa-twitter-square" aria-hidden="true"></i>
+                        </a>
+                        <p class=link-text>Twitter</p>
+                    </div>
+                    <div class='linknum'>
+                        <a href="https://github.com/jbrannigan89" target="_blank" class='link-button'><i
+                                class="fa fa-github-alt" aria-hidden="true"></i>
+                        </a>
+                        <p class=link-text>Github</p>
+                    </div>
+
+                    <div class='linknum'>
+                        <a href='https://www.facebook.com' target='_blank' class='link-button'><i
+                                class="fa fa-facebook-official" aria-hidden="true"></i>
+                        </a>
+                        <p class=link-text>Facebook</p>
+                    </div>
+
+                    <div class='linknum'>
+                        <button type='button' class='link-button'><i class="fa fa-address-card-o"
+                                aria-hidden="true"></i>
+                        </button>
+                        <p class=link-text>Resume</p>
+                    </div>
+                </div>`;
+    subContainerSection.innerHTML = `
+                <p class='abt-description'>Hello! My name's Joe and I'm a web developer. <br><br>
+                    I started tinkering with web design a few years ago. I was taking an IT networking
+                    course on coursera and was exposed to programming. I quickly found out that I enjoy programming more
+                    than the networking side of technology. I then dove in to learning from freeCodeCamp courses,
+                    youtube
+                    tutorials, and
+                    the expansive breadth of knowledge available on the internet.
+                    <br><br>
+                    I'm currently based in Greenville, South Carolina. In my freetime I like to travel, spend time with
+                    family, hike, and code.
+                </p>
+                <figure><img src='mojo.jpg' class='mojopic' />
+                    <figcaption>Lazy dog Mojo</figcaption>
+                </figure>`;
+  } else {
+    description.innerHTML = `<h1 class="name"> Joe Brannigan</h1>
+                <h3 class="profession">Web Developer</h3>
+                <div class='social-links'>
+                    <div class='linknum'><a href='https://twitter.com/JosephBrannig15' target="_blank"
+                            class='link-button'><i class="fa fa-twitter-square" aria-hidden="true"></i>
+                        </a>
+                        <p class=link-text>Twitter</p>
+                    </div>
+                    <div class='linknum'>
+                        <a href="https://github.com/jbrannigan89" target="_blank" class='link-button'><i
+                                class="fa fa-github-alt" aria-hidden="true"></i>
+                        </a>
+                        <p class=link-text>Github</p>
+                    </div>
+
+                    <div class='linknum'>
+                        <a href='https://www.facebook.com' target='_blank' class='link-button'><i
+                                class="fa fa-facebook-official" aria-hidden="true"></i>
+                        </a>
+                        <p class=link-text>Facebook</p>
+                    </div>
+
+                    <div class='linknum'>
+                        <button type='button' class='link-button'><i class="fa fa-address-card-o"
+                                aria-hidden="true"></i>
+                        </button>
+                        <p class=link-text>Resume</p>
+                    </div>
+                </div>`;
+    subContainerSection.innerHTML = `<img class='pic' src='portfoliopic-1.jpg' />
+                <p class='abt-description'>Hello! My name's Joe and I'm a web developer. <br><br>
+                    I started tinkering with web design a few years ago. I was taking an IT networking
+                    course on coursera and was exposed to programming. I quickly found out that I enjoy programming more
+                    than the networking side of technology. I then dove in to learning from freeCodeCamp courses,
+                    youtube
+                    tutorials, and
+                    the expansive breadth of knowledge available on the internet.
+                    <br><br>
+                    I'm currently based in Greenville, South Carolina. In my freetime I like to travel, spend time with
+                    family, hike, and code.
+                </p>
+                <figure><img src='mojo.jpg' class='mojopic' />
+                    <figcaption>Lazy dog Mojo</figcaption>
+                </figure>`;
   }
 });
