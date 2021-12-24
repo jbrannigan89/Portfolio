@@ -181,9 +181,8 @@ section {
 
 .logos {
   transition: background 0.3s;
-  display: flex;
+  display: flex;width: 100w;
 }
-
 
 .logos:hover {
   background: rgb(216, 207, 209, 0.5);
@@ -198,7 +197,7 @@ section {
 }
 .additional-tech-container:hover {
   background: rgb(216, 207, 209, 0.5);
-  transition: background 0.3s;
+  transition: background 0.3s;width:100vw
 }
 .one {
   grid-area: one;
@@ -251,7 +250,7 @@ section {
   justify-content: space-evenly;
   align-content: center;
   flex-flow: row wrap;
-  transition: 0.5s ease-in;
+  transition: 1.5s ease-in;
   opacity: 0;
 }
 .linknum {
@@ -361,7 +360,7 @@ textarea[type="text"] {
 }
 .additional-technologies h4 {
   font-family: "M PLUS 1 Code", sans-serif;
-  font-size: min(5vw, 2em);
+  font-size: min(3vw, 2em);
 }
 .mojopic {
   margin-top: 5vh;
@@ -369,12 +368,14 @@ textarea[type="text"] {
 }
 figcaption {
   text-align: center;
+  font-family: "Open Sans", sans-serif;
 }
 figure {
   margin-bottom: 5vh;
   display: flex;
   flex-flow: column;
   align-items: center;
+  row-gap: 0.3em;
 }
 .sectionBreaks {
   width: 40vw;
@@ -393,7 +394,8 @@ figure {
   max-width: 60%;
 }
 .text-container {
-  font-size: min(3vw, 15px);
+  font-size: min(2vw, 1.5em);
+  font-family: "Lato", sans-serif;
 }
 #footer {
   background: rgb(3, 24, 18);
@@ -421,12 +423,14 @@ figure {
   color: rgb(83, 204, 178);
   text-decoration: none;
 }
-@media (min-width: 850px) {
-  .mojopic {
-    width: 30vw;
-  }
+.link-button-bottom:hover {
+  color: rgb(109, 151, 151);
+}
+@media (min-width: 600px) {
   .sub-container {
-    width: 75vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   #about {
     display: flex;
@@ -445,5 +449,24 @@ figure {
     flex-flow: row wrap;
     transition: 0.5s ease-in;
     opacity: 1;
+  }
+  .abt-description {
+    font-size: min(2vw, 1.4em);
+    width: 50vw;
+  }
+  figure {
+    width: 40vw;
+  }
+  .mojopic {
+    border-radius: 0.7em;
+  }
+  .icon-container {
+    width: 60vw;
+  }
+  #skills {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
   }
 }

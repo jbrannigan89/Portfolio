@@ -103,12 +103,13 @@ fadeInItems.forEach((item) => {
   appearOnScroll.observe(item);
 });
 let sociallinks = document.querySelector(".social-links");
-
 function slowLoad() {
   sociallinks.style.opacity = 1;
 }
 
-window.setTimeout(slowLoad, 1000);
+window.addEventListener("load", slowLoad());
+
+window.addEventListener("resize", slowLoad);
 
 //Fixed Navbar After Scrolling
 let AboutSection = document.querySelector("#about");
@@ -157,11 +158,12 @@ window.addEventListener("scroll", function () {
   }
 });
 
+//Changing my pic location as screen gets bigger
 window.addEventListener("load", function desktopVersion() {
   let subContainerSection = document.querySelector(".sub-container");
   let description = document.querySelector(".description");
-  console.log(subContainerSection.clientWidth);
-  if (subContainerSection.clientWidth > 600) {
+  console.log(window.innerWidth);
+  if (window.innerWidth >= 600) {
     description.innerHTML = `<img class='pic' src='portfoliopic-1.jpg' /> <h1 class="name"> Joe Brannigan</h1>
                 <h3 class="profession">Web Developer</h3>
                 <div class='social-links'>
@@ -206,13 +208,14 @@ window.addEventListener("load", function desktopVersion() {
                 <figure><img src='mojo.jpg' class='mojopic' />
                     <figcaption>Lazy dog Mojo</figcaption>
                 </figure>`;
-  } 
+    sociallinks.classList.add("view");
+  }
 });
 window.addEventListener("resize", function desktopVersion() {
   let subContainerSection = document.querySelector(".sub-container");
   let description = document.querySelector(".description");
   console.log(subContainerSection.clientWidth);
-  if (subContainerSection.clientWidth > 600) {
+  if (window.innerWidth >= 600) {
     description.innerHTML = `<img class='pic' src='portfoliopic-1.jpg' /> <h1 class="name"> Joe Brannigan</h1>
                 <h3 class="profession">Web Developer</h3>
                 <div class='social-links'>
@@ -260,7 +263,7 @@ window.addEventListener("resize", function desktopVersion() {
   } else {
     description.innerHTML = `<h1 class="name"> Joe Brannigan</h1>
                 <h3 class="profession">Web Developer</h3>
-                <div class='social-links'>
+                <div class='social-links'  style='opacity: 1'>
                     <div class='linknum'><a href='https://twitter.com/JosephBrannig15' target="_blank"
                             class='link-button'><i class="fa fa-twitter-square" aria-hidden="true"></i>
                         </a>
