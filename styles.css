@@ -15,6 +15,7 @@
 html {
   scroll-behavior: smooth;
 }
+/*TOP SECTION */
 
 .image {
   opacity: 0.8;
@@ -43,15 +44,12 @@ html {
 }
 .nav-container {
   width: 100%;
-  display: flex;
-  flex-flow: column;
-  justify-content: flex-start;
-  align-items: flex-start;
   z-index: 1;
 }
 .nav-button-container {
   width: 100%;
   display: flex;
+  height: 10vh;
 }
 
 .links-container {
@@ -63,12 +61,10 @@ html {
   row-gap: 1em;
   width: min(50vw, 200px);
   position: absolute;
-  top: 50px;
 }
 
 .links-container li {
   font-family: "Open Sans", sans-serif;
-
   list-style: none;
 }
 
@@ -97,7 +93,6 @@ html {
 
 .profession {
   font-size: min(7vw, 2em);
-
   font-family: "Caveat", cursive;
   color: rgb(184, 155, 13);
 }
@@ -105,33 +100,15 @@ html {
   transform: translateX(0vw);
   display: flex;
 }
-
 section {
-  height: auto;
-}
-
-#about {
-  background: rgb(240, 238, 236);
-  scroll-margin-top: 15vh;
-  padding-top: 2em;
-  padding-bottom: 1em;
-}
-
-#skills {
-  background: rgb(245, 242, 241);
-  scroll-margin-top: 15vh;
-  padding-bottom: 1em;
-}
-
-#projects {
-  background: rgb(240, 238, 236);
-  scroll-margin-top: 15vh;
-  height: 50vh;
+  scroll-margin-top: 10vh;
 }
 
 .titles {
   font-family: "Lato", sans-serif;
   font-size: 2em;
+  display: flex;
+  justify-content: center;
 }
 
 .nav-button {
@@ -153,79 +130,6 @@ section {
   cursor: pointer;
 }
 
-.titles {
-  display: flex;
-  justify-content: center;
-}
-.pic {
-  border-radius: 100%;
-  float: right;
-  width: min(40vw, 200px);
-  border: rgb(190, 151, 133) 2px solid;
-  margin: 0 1.5em;
-}
-.abt-description {
-  font-size: min(3.5vw, 1.2em);
-  font-family: "Roboto", sans-serif;
-  margin: 0 1.5em;
-}
-
-.skillimgs {
-  width: 25vw;
-  max-width: 200px;
-}
-.icon-container {
-  display: flex;
-  flex-flow: column;
-}
-
-.logos {
-  transition: background 0.3s;
-  display: flex;width: 100w;
-}
-
-.logos:hover {
-  background: rgb(216, 207, 209, 0.5);
-}
-.additional-tech-container {
-  display: grid;
-  justify-content: space-around;
-
-  grid-template-columns: repeat(3, min(25%, 150px));
-  grid-template-rows: auto auto;
-  grid-template-areas: "one two three" "four five six";
-}
-.additional-tech-container:hover {
-  background: rgb(216, 207, 209, 0.5);
-  transition: background 0.3s;width:100vw
-}
-.one {
-  grid-area: one;
-}
-.two {
-  grid-area: two;
-}
-.three {
-  grid-area: three;
-}
-.four {
-  grid-area: four;
-}
-.five {
-  grid-area: five;
-}
-.six {
-  grid-area: six;
-}
-.fade-in {
-  opacity: 0;
-  transition: all 0.5s ease-in;
-  transform: translateX(-3vw);
-}
-.view {
-  opacity: 1;
-  transform: translateX(0);
-}
 .rotate {
   transform: rotate(90deg);
 }
@@ -278,6 +182,80 @@ i {
 .invisible {
   display: none;
 }
+
+#home-link {
+  display: none;
+}
+/*END OF TOP SECTION!!!!!!!!*/
+
+/*About Section*/
+#about {
+  background: rgb(240, 238, 236);
+  padding-top: 2em;
+  padding-bottom: 1em;
+}
+.pic {
+  border-radius: 100%;
+  float: right;
+  width: min(40vw, 200px);
+  border: rgb(190, 151, 133) 2px solid;
+  margin: 0 1.5em;
+}
+.abt-description {
+  font-size: min(3.5vw, 1.2em);
+  font-family: "Roboto", sans-serif;
+  margin: 0 1.5em;
+}
+.mojopic {
+  margin-top: 5vh;
+  width: min(100%, 600px);
+}
+figcaption {
+  text-align: center;
+  font-family: "Open Sans", sans-serif;
+}
+figure {
+  margin-bottom: 5vh;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  row-gap: 0.3em;
+}
+.sectionBreaks {
+  width: 40vw;
+  border: solid rgb(143, 132, 132) 1px;
+}
+.sectionDivs {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 2em;
+}
+/*END OF ABOUT SECTION!!!!!!!!!!!!*/
+
+/*Skills Section*/
+.icon-container {
+  display: flex;
+  flex-flow: column;
+}
+
+.logos {
+  transition: background 0.3s;
+  display: flex;
+}
+
+.logos:hover {
+  background: rgb(216, 207, 209, 0.5);
+}
+#skills {
+  background: rgb(245, 242, 241);
+  padding-bottom: 1em;
+}
+.fade-in {
+  opacity: 1;
+  transition: all 0.5s ease-in;
+  transform: translateX(-3vw);
+}
+
 .show-buttons {
   font-size: min(4vw, 2em);
   border-radius: 0.5em;
@@ -290,9 +268,79 @@ i {
   cursor: pointer;
   background: rgb(126, 214, 114);
 }
-#home-link {
-  display: none;
+.additional-technologies {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  padding: 3em 0;
 }
+.interactive-container {
+  padding: 0.2em 2em;
+  display: flex;
+  align-items: center;
+}
+.additional-technologies h4 {
+  font-family: "M PLUS 1 Code", sans-serif;
+  font-size: min(3vw, 2em);
+}
+
+.margin-bottom {
+  margin-bottom: 5vh;
+}
+
+.text-container {
+  font-size: min(2vw, 1.5em);
+  font-family: "Lato", sans-serif;
+}
+.skillimgs {
+  width: 25vw;
+  max-width: 200px;
+}
+
+.additional-tech-container {
+  display: grid;
+  justify-content: space-around;
+  grid-template-columns: repeat(3, min(25%, 150px));
+  grid-template-rows: auto auto;
+  grid-template-areas: "one two three" "four five six";
+}
+.additional-tech-container:hover {
+  background: rgb(216, 207, 209, 0.5);
+  transition: background 0.3s;
+  width: 100vw;
+}
+.one {
+  grid-area: one;
+}
+.two {
+  grid-area: two;
+}
+.three {
+  grid-area: three;
+}
+.four {
+  grid-area: four;
+}
+.five {
+  grid-area: five;
+}
+.six {
+  grid-area: six;
+}
+.view {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/*END OF SKILLS SECTION!!!!!!!!!!!!*/
+/*Project Section*/
+#projects {
+  background: rgb(240, 238, 236);
+  height: 50vh;
+}
+/*END OF PROJECT SECTION !!!!!!!!!!!!!!!!!!*/
+
+/*Contact Section*/
 #Contact-Form {
   display: flex;
   flex-direction: column;
@@ -347,56 +395,15 @@ textarea[type="text"] {
 #Contact p {
   font-family: "Noto Sans JP", sans-serif;
 }
-.additional-technologies {
-  display: flex;
-  flex-flow: column;
-  align-items: center;
-  padding: 3em 0;
-}
-.interactive-container {
-  padding: 0.2em 2em;
-  display: flex;
-  align-items: center;
-}
-.additional-technologies h4 {
-  font-family: "M PLUS 1 Code", sans-serif;
-  font-size: min(3vw, 2em);
-}
-.mojopic {
-  margin-top: 5vh;
-  width: min(100%, 600px);
-}
-figcaption {
-  text-align: center;
-  font-family: "Open Sans", sans-serif;
-}
-figure {
-  margin-bottom: 5vh;
-  display: flex;
-  flex-flow: column;
-  align-items: center;
-  row-gap: 0.3em;
-}
-.sectionBreaks {
-  width: 40vw;
-  border: solid rgb(143, 132, 132) 1px;
-}
-.sectionDivs {
-  display: flex;
-  justify-content: center;
-  padding-bottom: 2em;
-}
-.margin-bottom {
-  margin-bottom: 5vh;
-}
 #Contactme-Art {
   object-fit: contain;
   max-width: 60%;
 }
-.text-container {
-  font-size: min(2vw, 1.5em);
-  font-family: "Lato", sans-serif;
-}
+
+/*END OF CONTACT SECTION !!!!!!!!!!!*/
+
+/*footer section*/
+
 #footer {
   background: rgb(3, 24, 18);
   padding: 1em;
@@ -425,7 +432,9 @@ figure {
 }
 .link-button-bottom:hover {
   color: rgb(109, 151, 151);
-}
+} /*END OF FOOTER SECTION !!!!!!!!!*/
+
+/*Big screen Adjustments*/
 @media (min-width: 600px) {
   .sub-container {
     display: flex;
@@ -468,5 +477,25 @@ figure {
     flex-flow: column;
     justify-content: center;
     align-items: center;
+  }
+  .text-container {
+    font-size: min(2vw, 1.2em);
+  }
+  .skillimgs {
+    width: 25vw;
+    max-width: 150px;
+  }
+  .show-buttons {
+    font-size: min(4vw, 1.5em);
+  }
+  .additional-tech-container {
+    grid-template-columns: repeat(3, min(25%, 100px));
+    grid-template-rows: 200px 200px;
+  }
+  .additional-tech-container:hover {
+    background: none;
+  }
+  .nav-button {
+    color: rgb(17, 1, 1);
   }
 }
