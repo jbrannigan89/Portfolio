@@ -247,7 +247,7 @@ figure {
   padding-bottom: 1em;
 }
 .fade-in {
-  opacity: 1;
+  opacity: 0;
   transition: all 0.5s ease-in;
   transform: translateX(-3vw);
 }
