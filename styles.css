@@ -243,9 +243,6 @@ figure {
   display: flex;
 }
 
-.logos:hover {
-  background: rgb(216, 207, 209, 0.5);
-}
 #skills {
   background: rgb(245, 242, 241);
   padding-bottom: 1em;
@@ -497,5 +494,8 @@ textarea[type="text"] {
   }
   .nav-button {
     color: rgb(17, 1, 1);
+  }
+  .logos:hover {
+    background: rgb(216, 207, 209, 0.5);
   }
 }
