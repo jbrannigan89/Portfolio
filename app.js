@@ -122,11 +122,12 @@ let FixedNav = new IntersectionObserver(function (entries, FixedNav) {
   entries.forEach(function (entry) {
     if (!entry.isIntersecting) {
       navContainer.style.position = "fixed";
-      navbarBackground.style.background = "rgb(112, 169, 187)";
+      navbarBackground.style.background = "rgb(243, 226, 226)";
       homeLink.style.display = "inline";
+      navbarBackground.style.boxShadow = "0px 3px 10px gray";
     } else {
       navContainer.style.position = "absolute";
-      navbarBackground.style.background = "";
+      navbarBackground.style.background = "";navbarBackground.style.boxShadow = "";
       homeLink.style.display = "none";
       links.classList.remove("show");
     }
