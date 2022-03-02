@@ -334,6 +334,15 @@ figure {
   background: rgb(240, 238, 236);
   height: auto;
 }
+.project-description-title {
+  font-family: "Lato", sans-serif;
+}
+.project-description {
+  font-size: 0.8em;
+  margin-top: 0.5em;
+  text-align: center;
+  font-family: "Noto Sans JP", sans-serif;
+}
 .project-description-container {
   display: flex;
   flex-flow: column;
@@ -529,7 +538,7 @@ textarea[type="text"] {
   }
   .additional-tech-container {
     grid-template-columns: repeat(3, min(25%, 100px));
-    grid-template-rows: 200px 200px;
+    grid-template-rows: auto auto;
   }
   .additional-tech-container:hover {
     background: none;
@@ -583,10 +592,10 @@ textarea[type="text"] {
   .projects-container {
     display: grid;
     justify-content: center;
-    grid-template-columns: min(50vw, 400px) min(50vw, 400px);
+    grid-template-columns: min(50vw, 500px) min(50vw, 500px);
     grid-template-rows: auto;
     grid-template-areas: "one two" "three .";
-    row-gap: 3em;
+    row-gap: 5em;
   }
 
   .project-svg {
