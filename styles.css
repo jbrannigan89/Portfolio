@@ -332,8 +332,47 @@ figure {
 /*Project Section*/
 #projects {
   background: rgb(240, 238, 236);
-  height: 50vh;
+  height: auto;
 }
+.project-description-container {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}
+.individual-projects {
+  border: solid rgb(190, 170, 170) 1px;
+  border-radius: 2em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  background-color: rgb(148, 179, 179);
+  padding: 1em;
+  text-decoration: none;
+  color: rgb(19, 15, 5);
+  transition: background 0.5s;
+}
+.individual-projects:hover {
+  background: rgb(97, 173, 163);
+}
+.individual-projects-container {
+  display: flex;
+  justify-content: center;
+}
+.projects-container {
+  display: flex;
+  flex-flow: column;
+  row-gap: 2em;
+  padding-bottom: 2em;
+  margin-top: 1em;
+}
+.project-svg {
+  width: 200px;
+  height: 200px;
+}
+
 /*END OF PROJECT SECTION !!!!!!!!!!!!!!!!!!*/
 
 /*Contact Section*/
@@ -400,6 +439,7 @@ textarea[type="text"] {
 }
 
 /*END OF CONTACT SECTION !!!!!!!!!!!*/
+/*Project Section */
 
 /*footer section*/
 
@@ -499,5 +539,58 @@ textarea[type="text"] {
   }
   .logos:hover {
     background: rgb(216, 207, 209, 0.5);
+  }
+  #projects {
+    background: rgb(240, 238, 236);
+    height: auto;
+  }
+  .project-description-container {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .individual-projects {
+    border: solid rgb(190, 170, 170) 1px;
+    border-radius: 2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: min(50%, 350px);
+    background-color: rgb(148, 179, 179);
+    padding: 1em;
+    text-decoration: none;
+    color: rgb(19, 15, 5);
+    transition: background 0.5s;
+  }
+  .individual-projects:hover {
+    background: rgb(97, 173, 163);
+  }
+  .individual-projects-container {
+    display: flex;
+    justify-content: center;
+  }
+  .project1 {
+    grid-area: one;
+  }
+  .project2 {
+    grid-area: two;
+  }
+  .project3 {
+    grid-area: three;
+  }
+  .projects-container {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: min(50vw, 400px) min(50vw, 400px);
+    grid-template-rows: auto;
+    grid-template-areas: "one two" "three .";
+    row-gap: 3em;
+  }
+
+  .project-svg {
+    width: 200px;
+    height: 200px;
   }
 }
