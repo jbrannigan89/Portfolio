@@ -398,23 +398,26 @@ figure {
   font-size: 1.2em;
   font-family: "Noto Sans JP", sans-serif;
 }
+.individual-projects-container {
+  height: 200px;
+}
 #Contact-Form input {
   font-family: "Roboto", sans-serif;
   font-size: 1rem;
-  padding: 0.5em;
+  padding: 0.75em;
   margin: 0.15em 0 0.3em 0;
   border-radius: 1em;
-  border: 1px solid rgb(104, 177, 169);
+  border: 2px solid rgb(104, 177, 169);
 }
 textarea[type="text"] {
   height: 7em;
   font-size: 1rem;
-  padding: 0.3em;
+  padding: 0.75em;
   margin: 0.15em 0 0.3em 0;
   font-family: "Roboto", sans-serif;
   border-radius: 0.2em;
   border-radius: 1em;
-  border: 1px solid rgb(104, 177, 169);
+  border: 2px solid rgb(104, 177, 169);
 }
 #Submit-Button {
   font-size: min(3vw, 1.5em);
@@ -567,7 +570,7 @@ textarea[type="text"] {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: min(50%, 350px);
+    width: min(70%, 350px);
     background-color: rgb(148, 179, 179);
     padding: 1em;
     text-decoration: none;
@@ -580,6 +583,7 @@ textarea[type="text"] {
   .individual-projects-container {
     display: flex;
     justify-content: center;
+    height: 250px;
   }
   .project1 {
     grid-area: one;
@@ -594,15 +598,11 @@ textarea[type="text"] {
     display: grid;
     justify-content: center;
     grid-template-columns: min(50vw, 500px) min(50vw, 500px);
-    grid-template-rows: auto;
+    grid-template-rows: 220px;
     grid-template-areas: "one two" "three .";
     row-gap: 5em;
   }
 
-  .project-svg {
-    width: 150px;
-    height: 150px;
-  }
   #Contact {
     background: white;
     padding: 2em;
