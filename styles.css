@@ -389,7 +389,7 @@ figure {
   display: flex;
   flex-direction: column;
   background: white;
-  width: min(40%, 400px);
+  width: min(80%, 400px);
   padding: 0.5em;
   border-radius: 0.3em;
 }
@@ -436,15 +436,16 @@ textarea[type="text"] {
   background: white;
   padding: 2em;
   display: flex;
+  flex-direction: column;
   justify-content: space-evenly;
-  gap: 1em;
+  align-items: center;
 }
 #Contact p {
   font-family: "Noto Sans JP", sans-serif;
 }
 #Contactme-Art {
   object-fit: contain;
-  max-width: 60%;
+  width: 40vw;
 }
 
 /*END OF CONTACT SECTION !!!!!!!!!!!*/
@@ -599,7 +600,25 @@ textarea[type="text"] {
   }
 
   .project-svg {
-    width: 200px;
-    height: 200px;
+    width: 150px;
+    height: 150px;
+  }
+  #Contact {
+    background: white;
+    padding: 2em;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+  }
+  #Contact-Form {
+    display: flex;
+    flex-direction: column;
+    background: white;
+    width: min(40%, 400px);
+    padding: 0.5em;
+    border-radius: 0.3em;
+  }
+  #Contactme-Art {
+    width: min(50vw, 300px);
   }
 }
