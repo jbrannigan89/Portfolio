@@ -594,12 +594,15 @@ textarea[type="text"] {
   .project3 {
     grid-area: three;
   }
+  .project4 {
+    grid-area: four;
+  }
   .projects-container {
     display: grid;
     justify-content: center;
     grid-template-columns: min(50vw, 500px) min(50vw, 500px);
     grid-template-rows: 220px;
-    grid-template-areas: "one two" "three .";
+    grid-template-areas: "one two" "three four";
     row-gap: 5em;
   }
 
