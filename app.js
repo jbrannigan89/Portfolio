@@ -122,7 +122,7 @@ let FixedNav = new IntersectionObserver(function (entries, FixedNav) {
   entries.forEach(function (entry) {
     if (!entry.isIntersecting) {
       navContainer.style.position = "fixed";
-      navbarBackground.style.background = "rgb(243, 226, 226)";
+      navbarBackground.style.background = "white";
       homeLink.style.display = "inline";
       navbarBackground.style.boxShadow = "0px 3px 10px gray";
     } else {

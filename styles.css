@@ -1,3 +1,6 @@
+
+
+
 /* Font Families
     font-family: 'Lato', sans-serif;
     font-family: 'Noto Sans JP', sans-serif;
@@ -56,7 +59,7 @@ html {
   flex-flow: column;
   transition: all linear 0.3s;
   transform: translateX(-50vw);
-  background: white;
+  background: rgb(248, 238, 238);
   row-gap: 1em;
   width: min(50vw, 200px);
   position: absolute;
@@ -114,7 +117,7 @@ section {
   font-size: 2em;
   border-style: none;
   background: transparent;
-  color: rgb(38, 107, 53);
+  color: rgb(10, 27, 14);
   transition: all linear 0.3s;
   margin: 0.2em;
 }
@@ -598,7 +601,7 @@ textarea[type="text"] {
     grid-area: four;
   }
   .projects-container {
-    display: grid;
+    display: grid;overflow: hidden;
     justify-content: center;
     grid-template-columns: min(50vw, 500px) min(50vw, 500px);
     grid-template-rows: 220px;
@@ -625,3 +628,5 @@ textarea[type="text"] {
     width: min(50vw, 300px);
   }
 }
+
+   
