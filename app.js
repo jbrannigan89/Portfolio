@@ -117,19 +117,23 @@ let topSection = document.querySelector("#top");
 const NavOptions = { threshold: 0.8, root: null };
 let homeLink = document.querySelector("#home-link");
 let navbarBackground = document.querySelector(".nav-button-container");
+let homeButton = document.querySelector(".home-button");
 
 let FixedNav = new IntersectionObserver(function (entries, FixedNav) {
   entries.forEach(function (entry) {
     if (!entry.isIntersecting) {
       navContainer.style.position = "fixed";
-      navbarBackground.style.background = "white";
+      navbarBackground.style.background = "rgb(236, 223, 223)";
       homeLink.style.display = "inline";
       navbarBackground.style.boxShadow = "0px 3px 10px gray";
+      homeButton.style.display = "block";
     } else {
       navContainer.style.position = "absolute";
-      navbarBackground.style.background = "";navbarBackground.style.boxShadow = "";
+      navbarBackground.style.background = "";
+      navbarBackground.style.boxShadow = "";
       homeLink.style.display = "none";
       links.classList.remove("show");
+      homeButton.style.display = "none";
     }
   });
 }, NavOptions);

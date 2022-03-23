@@ -1,6 +1,3 @@
-
-
-
 /* Font Families
     font-family: 'Lato', sans-serif;
     font-family: 'Noto Sans JP', sans-serif;
@@ -51,6 +48,7 @@ html {
 .nav-button-container {
   width: 100%;
   display: flex;
+
   height: 10vh;
 }
 
@@ -187,6 +185,23 @@ i {
 
 #home-link {
   display: none;
+}
+.home-button {
+  position: fixed;
+  top: 87vh;
+  right: 5vw;
+  z-index: 10000;
+  background: rgb(188, 229, 160);
+  border-style: none;
+  border-radius: 0.3em;
+  font-size: min(3vw, 1.2em);
+}
+.material-icons {
+  font-size: 3em;
+  color: black;
+}
+.home-button:hover {
+  background: rgb(124, 182, 124);
 }
 /*END OF TOP SECTION!!!!!!!!*/
 
@@ -488,7 +503,9 @@ textarea[type="text"] {
 .link-button-bottom:hover {
   color: rgb(109, 151, 151);
 } /*END OF FOOTER SECTION !!!!!!!!!*/
-
+.trying {
+  display: none;
+}
 /*Big screen Adjustments*/
 @media (min-width: 600px) {
   .sub-container {
@@ -601,7 +618,8 @@ textarea[type="text"] {
     grid-area: four;
   }
   .projects-container {
-    display: grid;overflow: hidden;
+    display: grid;
+    overflow: hidden;
     justify-content: center;
     grid-template-columns: min(50vw, 500px) min(50vw, 500px);
     grid-template-rows: 220px;
@@ -627,6 +645,28 @@ textarea[type="text"] {
   #Contactme-Art {
     width: min(50vw, 300px);
   }
-}
+  .trying {
+    display: flex;
 
-   
+    font-size: min(2vw, 1em);
+    color: rgb(194, 138, 55);
+    column-gap: 0.75em;
+    margin-right: 1em;
+  }
+  .trying a {
+    text-decoration: none;
+    color: rgb(78, 73, 25);
+    transition: all 0.3s ease-in;
+  }
+  .trying a:hover {
+    text-decoration: none;
+    color: rgb(197, 180, 30);
+  }
+  .nav-button {
+    display: none;
+  }
+  .nav-button-container {
+    justify-content: flex-end;
+    align-items: center;
+  }
+}
