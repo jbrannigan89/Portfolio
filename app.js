@@ -192,9 +192,9 @@ window.addEventListener("load", function desktopVersion() {
                     </div>
 
                     <div class='linknum'>
-                        <button type='button' class='link-button'><i class="fa fa-address-card-o"
+                        <a href="Resume2.PDF" class='link-button' target="_blank"><i class="fa fa-address-card-o"
                                 aria-hidden="true"></i>
-                        </button>
+                        </a>
                         <p class=link-text>Resume</p>
                     </div>
                 </div>`;
@@ -243,10 +243,10 @@ window.addEventListener("resize", function desktopVersion() {
                         <p class=link-text>Facebook</p>
                     </div>
 
-                    <div class='linknum'>
-                        <button type='button' class='link-button'><i class="fa fa-address-card-o"
+                   <div class='linknum'>
+                        <a href="Resume2.PDF" class='link-button' target="_blank"><i class="fa fa-address-card-o"
                                 aria-hidden="true"></i>
-                        </button>
+                        </a>
                         <p class=link-text>Resume</p>
                     </div>
                 </div>`;
@@ -289,9 +289,9 @@ window.addEventListener("resize", function desktopVersion() {
                     </div>
 
                     <div class='linknum'>
-                        <button type='button' class='link-button'><i class="fa fa-address-card-o"
+                        <a href="Resume2.PDF" class='link-button' target="_blank"><i class="fa fa-address-card-o"
                                 aria-hidden="true"></i>
-                        </button>
+                        </a>
                         <p class=link-text>Resume</p>
                     </div>
                 </div>`;
