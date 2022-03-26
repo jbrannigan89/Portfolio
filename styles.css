@@ -656,7 +656,7 @@ textarea[type="text"] {
   .trying a {
     text-decoration: none;
     color: rgb(78, 73, 25);
-    transition: all 0.3s ease-in;
+    transition: all 0.3s ease-in;font-family: 'Noto Sans JP', sans-serif;;
   }
   .trying a:hover {
     text-decoration: none;
