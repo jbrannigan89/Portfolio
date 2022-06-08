@@ -623,7 +623,7 @@ textarea[type="text"] {
     justify-content: center;
     grid-template-columns: min(50vw, 500px) min(50vw, 500px);
     grid-template-rows: 220px;
-    grid-template-areas: "one two" "three four";
+    grid-template-areas: "one two" "three four" "five .";
     row-gap: 5em;
   }
 
